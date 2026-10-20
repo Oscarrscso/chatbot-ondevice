@@ -1,0 +1,105 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+    000000000000000000000013 /* PocketChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000012 /* PocketChatApp.swift */; };
+    000000000000000000000015 /* ChatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000014 /* ChatModels.swift */; };
+    000000000000000000000017 /* ChatStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000016 /* ChatStore.swift */; };
+    000000000000000000000019 /* ChatEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000018 /* ChatEngine.swift */; };
+    00000000000000000000001B /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001A /* ChatView.swift */; };
+    000000000000000000000008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000007 /* Assets.xcassets */; };
+    000000000000000000000012 /* PocketChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketChatApp.swift; sourceTree = "<group>"; };
+    000000000000000000000014 /* ChatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModels.swift; sourceTree = "<group>"; };
+    000000000000000000000016 /* ChatStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStore.swift; sourceTree = "<group>"; };
+    000000000000000000000018 /* ChatEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEngine.swift; sourceTree = "<group>"; };
+    00000000000000000000001A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+    000000000000000000000006 /* PocketChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+    000000000000000000000007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+    00000000000000000000000B = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+    000000000000000000000002 = {isa = PBXGroup; children = (000000000000000000000003 /* PocketChat */, 000000000000000000000004 /* Products */); sourceTree = "<group>"; };
+    000000000000000000000003 = {isa = PBXGroup; children = (000000000000000000000012 /* PocketChatApp.swift */, 000000000000000000000014 /* ChatModels.swift */, 000000000000000000000016 /* ChatStore.swift */, 000000000000000000000018 /* ChatEngine.swift */, 00000000000000000000001A /* ChatView.swift */, 000000000000000000000007 /* Assets.xcassets */); path = PocketChat; sourceTree = "<group>"; };
+    000000000000000000000004 = {isa = PBXGroup; children = (000000000000000000000006 /* PocketChat.app */); name = Products; sourceTree = "<group>"; };
+    000000000000000000000005 = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = 00000000000000000000000D;
+      buildPhases = (000000000000000000000009, 00000000000000000000000B, 00000000000000000000000A);
+      buildRules = ();
+      dependencies = ();
+      name = PocketChat;
+      productName = PocketChat;
+      productReference = 000000000000000000000006 /* PocketChat.app */;
+      productType = "com.apple.product-type.application";
+    };
+    000000000000000000000001 = {
+      isa = PBXProject;
+      attributes = { BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 2700; TargetAttributes = { 000000000000000000000005 = { CreatedOnToolsVersion = 27.0; }; }; };
+      buildConfigurationList = 00000000000000000000000C;
+      compatibilityVersion = "Xcode 14.0";
+      developmentRegion = en;
+      hasScannedForEncodings = 0;
+      knownRegions = (en, Base);
+      mainGroup = 000000000000000000000002;
+      productRefGroup = 000000000000000000000004;
+      projectDirPath = "";
+      projectRoot = "";
+      targets = (000000000000000000000005 /* PocketChat */);
+    };
+    00000000000000000000000A = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000008 /* Assets.xcassets in Resources */); runOnlyForDeploymentPostprocessing = 0; };
+    000000000000000000000009 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (000000000000000000000013 /* PocketChatApp.swift in Sources */, 000000000000000000000015 /* ChatModels.swift in Sources */, 000000000000000000000017 /* ChatStore.swift in Sources */, 000000000000000000000019 /* ChatEngine.swift in Sources */, 00000000000000000000001B /* ChatView.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
+    00000000000000000000000E = {isa = XCBuildConfiguration; buildSettings = {
+      ALWAYS_SEARCH_USER_PATHS = NO;
+      CLANG_ENABLE_MODULES = YES;
+      CODE_SIGN_STYLE = Automatic;
+      IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+      SDKROOT = iphoneos;
+      SWIFT_VERSION = 5.0;
+    }; name = Debug; };
+    00000000000000000000000F = {isa = XCBuildConfiguration; buildSettings = {
+      ALWAYS_SEARCH_USER_PATHS = NO;
+      CLANG_ENABLE_MODULES = YES;
+      CODE_SIGN_STYLE = Automatic;
+      IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+      SDKROOT = iphoneos;
+      SWIFT_VERSION = 5.0;
+    }; name = Release; };
+    000000000000000000000010 = {isa = XCBuildConfiguration; buildSettings = {
+      ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+      CODE_SIGN_STYLE = Automatic;
+      CURRENT_PROJECT_VERSION = 1;
+      DEVELOPMENT_TEAM = "";
+      GENERATE_INFOPLIST_FILE = YES;
+      INFOPLIST_KEY_CFBundleDisplayName = PocketChat;
+      INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+      INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+      IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+      MARKETING_VERSION = 1.0;
+      PRODUCT_BUNDLE_IDENTIFIER = dev.oscar.pocketchat;
+      PRODUCT_NAME = "$(TARGET_NAME)";
+      SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+      SWIFT_VERSION = 5.0;
+      TARGETED_DEVICE_FAMILY = 1;
+    }; name = Debug; };
+    000000000000000000000011 = {isa = XCBuildConfiguration; buildSettings = {
+      ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+      CODE_SIGN_STYLE = Automatic;
+      CURRENT_PROJECT_VERSION = 1;
+      DEVELOPMENT_TEAM = "";
+      GENERATE_INFOPLIST_FILE = YES;
+      INFOPLIST_KEY_CFBundleDisplayName = PocketChat;
+      INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+      INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+      IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+      MARKETING_VERSION = 1.0;
+      PRODUCT_BUNDLE_IDENTIFIER = dev.oscar.pocketchat;
+      PRODUCT_NAME = "$(TARGET_NAME)";
+      SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+      SWIFT_VERSION = 5.0;
+      TARGETED_DEVICE_FAMILY = 1;
+    }; name = Release; };
+    00000000000000000000000C = {isa = XCConfigurationList; buildConfigurations = (00000000000000000000000E, 00000000000000000000000F); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    00000000000000000000000D = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000010, 000000000000000000000011); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+  };
+  rootObject = 000000000000000000000001;
+}

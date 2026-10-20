@@ -1,0 +1,28 @@
+name: PocketChat
+options:
+  bundleIdPrefix: dev.oscar
+  deploymentTarget:
+    iOS: "27.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "27.0"
+targets:
+  PocketChat:
+    type: application
+    platform: iOS
+    deploymentTarget: "27.0"
+    sources:
+      - path: PocketChat
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.oscar.pocketchat
+        PRODUCT_NAME: PocketChat
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: PocketChat
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
