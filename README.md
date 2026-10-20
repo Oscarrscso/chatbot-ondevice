@@ -19,25 +19,44 @@ A native SwiftUI chatbot powered by Apple's **on-device Foundation Models framew
 - Apple Intelligence enabled in Settings with its on-device language model available
 - Apple development team selected in Xcode (a personal team works for your own phone)
 
-## Clone, build and install
+## Clone, build and install on iPhone
 
-From Terminal on your Mac:
+**One-time setup:** Install and open full Xcode. Open `PocketChat.xcodeproj`, select the PocketChat target → **Signing & Capabilities**, choose your Apple development **Team**, and enable automatic signing. Your free Personal Team can sign apps for your own phone. Change `dev.oscar.pocketchat` if that bundle identifier is already in use.
 
-```sh
+On your iPhone, enable **Developer Mode** (Settings → Privacy & Security), connect it to your Mac over USB, unlock it, and tap **Trust This Computer**. Ensure Apple Intelligence is enabled and downloaded.
+
+**First installation using Mac Terminal (builds, installs and launches the app):**
+
+```bash
 git clone https://github.com/Oscarrscso/chatbot-ondevice.git
 cd chatbot-ondevice
-open PocketChat.xcodeproj
+bash scripts/install-iphone.sh
 ```
 
-In Xcode: select the **PocketChat** target → **Signing & Capabilities** → choose your personal **Team** and turn on automatic signing. Change `dev.oscar.pocketchat` to your own unique bundle ID if needed.
+**To pull changes and reinstall later:**
 
-Connect/unlock/trust your iPhone, enable Developer Mode if prompted, select the iPhone as the run destination, and press **Cmd-R**. Test on a physical device: Simulator behaviour for Foundation Models can differ.
-
-CLI build (signing configured in Xcode):
-
-```sh
-xcodebuild -project PocketChat.xcodeproj -scheme PocketChat -configuration Debug -destination 'generic/platform=iOS' build
+```bash
+cd chatbot-ondevice
+git pull
+bash scripts/install-iphone.sh
 ```
+
+The script automatically detects a connected iPhone, runs `xcodebuild`, signs with your configured Xcode team, installs with `xcrun devicectl device install app`, and attempts to launch it. You do not need to install `xcodegen`.
+
+If multiple iPhones are connected, supply the device ID:
+
+```bash
+xcrun devicectl list devices
+bash scripts/install-iphone.sh YOUR_IPHONE_DEVICE_ID
+```
+
+If you prefer to supply a team ID explicitly:
+
+```bash
+APPLE_TEAM_ID=YOUR_TEAM_ID bash scripts/install-iphone.sh
+```
+
+Alternatively, select your iPhone as the run destination in Xcode and press **Cmd-R**. If signing/build fails, inspect the actual Xcode error. The installation script has not been run on macOS in this environment.
 
 To regenerate the Xcode project from the included `project.yml` (optional):
 
