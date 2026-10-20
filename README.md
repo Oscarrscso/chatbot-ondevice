@@ -23,37 +23,37 @@ A native SwiftUI chatbot powered by Apple's **on-device Foundation Models framew
 
 From Terminal on your Mac:
 
-\`\`\`sh
+```sh
 git clone https://github.com/Oscarrscso/chatbot-ondevice.git
 cd chatbot-ondevice
 open PocketChat.xcodeproj
-\`\`\`
+```
 
-In Xcode: select the **PocketChat** target → **Signing & Capabilities** → choose your personal **Team** and turn on automatic signing. Change \`dev.oscar.pocketchat\` to your own unique bundle ID if needed.
+In Xcode: select the **PocketChat** target → **Signing & Capabilities** → choose your personal **Team** and turn on automatic signing. Change `dev.oscar.pocketchat` to your own unique bundle ID if needed.
 
 Connect/unlock/trust your iPhone, enable Developer Mode if prompted, select the iPhone as the run destination, and press **Cmd-R**. Test on a physical device: Simulator behaviour for Foundation Models can differ.
 
 CLI build (signing configured in Xcode):
 
-\`\`\`sh
+```sh
 xcodebuild -project PocketChat.xcodeproj -scheme PocketChat -configuration Debug -destination 'generic/platform=iOS' build
-\`\`\`
+```
 
-To regenerate the Xcode project from the included \`project.yml\` (optional):
+To regenerate the Xcode project from the included `project.yml` (optional):
 
-\`\`\`sh
+```sh
 brew install xcodegen
 xcodegen generate
-\`\`\`
+```
 
 ## Source structure
 
-- \`PocketChat/PocketChatApp.swift\`: app entry
-- \`PocketChat/ChatModels.swift\`: chat records
-- \`PocketChat/ChatStore.swift\`: JSON persistence in app sandbox
-- \`PocketChat/ChatEngine.swift\`: Foundation Models streaming and bounded context
-- \`PocketChat/ChatView.swift\`: native chat UI
-- \`project.yml\`: reproducible Xcode project definition
+- `PocketChat/PocketChatApp.swift`: app entry
+- `PocketChat/ChatModels.swift`: chat records
+- `PocketChat/ChatStore.swift`: JSON persistence in app sandbox
+- `PocketChat/ChatEngine.swift`: Foundation Models streaming and bounded context
+- `PocketChat/ChatView.swift`: native chat UI
+- `project.yml`: reproducible Xcode project definition
 
 All prompts and messages remain inside the app and the Apple on-device model. The project does not add cloud calls. Long histories are truncated to respect the model's context limit. Deleting the app will typically delete its local chat data; back up before uninstalling.
 
